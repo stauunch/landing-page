@@ -18,7 +18,7 @@ header {
     position: fixed;
     top: 0;
     height: 80px;
-    background-color: beige;
+    background-color: black;
     position: relative;
     width: 100%;
     display: flex;
@@ -43,7 +43,7 @@ header h2 {
 .menu-list {
     list-style: none;
     display: flex;
-    color: rgb(0, 0, 0);
+    color: rgb(243, 241, 241);
 }
 
 .menu-list li {
@@ -125,13 +125,14 @@ button.btn:hover {
 
 @media (max-width: 800px) {
     body {
-        background-color: white;
+        background-color: rgb(0, 0, 0);
     }
     .left,
     .right {
         padding-left: 40px;
         padding-right: 40px;
         max-width: 80%;
+        margin-bottom: 50px;
     }
     header h2 {
         font-size: 20px;
@@ -142,6 +143,9 @@ button.btn:hover {
     }
 }
 
+
+/* ----------------------------------- */
+
 @media (max-width: 650px) {
     .main {
         flex-direction: column;
@@ -151,4 +155,31 @@ button.btn:hover {
         padding-left: 10px;
         padding-right: 10px;
     }
+}
+
+.footer {
+    display: flex;
+    padding: 5px;
+}
+
+.footer-list {
+    list-style: none;
+    display: flex;
+    color: rgb(243, 241, 241);
+}
+
+.footer .footer-list li a {
+    color: #9fb5cc;
+}
+
+.footer-list li {
+    margin-left: 30px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.7s;
+    font-size: 80px;
+}
+
+.footer .footer-list li a:hover {
+    color: #006adb;
 }
