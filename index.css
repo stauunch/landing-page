@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    color: red;
+    position: fixed;
+    top: 0;
+    height: 80px;
+    background-color: beige;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+    font-size: 15px;
+}
+
+header h2 {
+    text-transform: uppercase;
+    font-size: 1.7em;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    padding: 5px;
+}
+
+.menu-list {
+    list-style: none;
+    display: flex;
+    color: rgb(0, 0, 0);
+}
+
+.menu-list li {
+    margin-left: 30px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+.menu-list li:hover {
+    color: red;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.main {
+    flex: 1;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.right {
+    padding: 40px 48px;
+}
+
+.left {
+    max-width: 85%;
+    padding: 40px 64px;
+}
+
+.right img {
+    width: 100%;
+}
+
+.title {
+    color: red;
+    font-size: 3.2em;
+    text-transform: capitalize;
+    font-weight: bold;
+    width: 50%;
+    letter-spacing: 2px;
+}
+
+.left p {
+    color: #9fb5cc;
+    font-size: 1.1em;
+    letter-spacing: 0.7px;
+    line-height: 32px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+button.btn {
+    background-color: purple;
+    padding: 18px 32px;
+    color: #9fb5cc;
+    outline: none;
+    border: none;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: opacity 0, 9;
+    box-shadow: 0 20px 35px rgb(0, 0, 0, 0, 1), 0 15px 12px rgb(0, 0, 0, 0, 0.08);
+}
+
+button.btn:hover {
+    background-color: red;
+    opacity: 0.5;
+}
+
+
+/* RESPONSIVENESS */
+
+
+/* when the screen is less than 800px */
+
+@media (max-width: 800px) {
+    body {
+        background-color: white;
+    }
+    .left,
+    .right {
+        padding-left: 40px;
+        padding-right: 40px;
+        max-width: 80%;
+    }
+    header h2 {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    header {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 650px) {
+    .main {
+        flex-direction: column;
+    }
+    .left,
+    .right {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
